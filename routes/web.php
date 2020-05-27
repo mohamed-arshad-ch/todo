@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome',['name'=> 'Arshad']);
-});
+Route::get('/',"TodoController@home");
+
+Route::get('/update',"TodoController@update");

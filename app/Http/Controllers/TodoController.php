@@ -72,4 +72,12 @@ class TodoController extends Controller
 
 
     }
+
+    public function delete(Todo $id){
+
+        $id->delete();
+
+        return back();
+
+    }
 }

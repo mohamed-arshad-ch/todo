@@ -17,6 +17,11 @@
                 @csrf
                 <label for="title">Title*</label>
                 <input type="text" name="title" value="{{$id->title}}" id="title" class="form-control mb-2"/>
+                @error('title')
+
+                    <small class="text-danger">{{$message}}</small>
+
+                @enderror
                 <input type="submit" class="btn btn-dark btn-block" value="Update"/>
             </form>
         </div>

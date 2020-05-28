@@ -39,7 +39,8 @@
                             </div>
                             <div>
                                 <a href="{{ route('edit',$todo->id) }}" class="btn btn-warning">Update</a>
-                                <form action="#" method="POST" class="d-inline-block">
+                                <form action="{{ route('delete',$todo->id) }}" method="POST" class="d-inline-block">
+                                @csrf
                                     <input type="submit" class="btn btn-danger" value="Delete"/>
                                 </form>
                             </div>
